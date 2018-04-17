@@ -1,0 +1,12 @@
+
+server:
+  port: 9000
+
+spring:
+  application:
+    name: SpringBoot监控服务端
+
+security:
+  user:
+    name: zteits
+    password: zteits

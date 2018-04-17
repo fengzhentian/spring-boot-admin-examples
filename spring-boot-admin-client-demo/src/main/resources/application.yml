@@ -1,0 +1,32 @@
+
+info: #定义各种额外的详情给服务端显示  
+  app:  
+    name: "@project.name@" #从pom.xml中获取  
+    description: "@project.description@"  
+    version: "@project.version@"  
+    spring-boot-version: "@project.parent.version@"
+
+server:
+  port: 8091
+
+spring:
+  application:
+    name: SpringBoot客户端
+  boot:
+    admin:
+      url: http://192.168.1.170:8080
+      username: "${security.user.name}"       #These two are needed so that the client
+      password: "${security.user.password}"   #can register at the protected server api
+#      client:
+#        metadata:
+#          user.name: "${security.user.name}"          #These two are needed so that the server
+#          user.password:  "${security.user.password}" #can access the proteceted client endpoints
+
+security:
+  user:
+    name: admin
+    password: admin
+
+management:
+  security:
+    enabled: false
