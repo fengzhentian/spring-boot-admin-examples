@@ -1,0 +1,9 @@
+
+eureka:
+  instance:
+    hostname: 192.168.1.170
+  client:
+    register-with-eureka: false
+    fetch-registry: false
+    service-url:
+      defaultZone: http://${eureka.instance.hostname}:${server.port}/eureka/

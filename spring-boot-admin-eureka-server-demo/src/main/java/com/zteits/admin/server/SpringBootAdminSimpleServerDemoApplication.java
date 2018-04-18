@@ -8,9 +8,9 @@ import org.springframework.cloud.client.discovery.EnableDiscoveryClient;
 
 import de.codecentric.boot.admin.config.EnableAdminServer;
 
-@SpringBootApplication
 @EnableDiscoveryClient
 @EnableAdminServer
+@SpringBootApplication
 public class SpringBootAdminSimpleServerDemoApplication {
 
     private static final Logger logger = LoggerFactory
