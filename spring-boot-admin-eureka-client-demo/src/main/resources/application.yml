@@ -1,0 +1,34 @@
+
+server:
+  port: 8091
+
+spring:
+  application:
+    name: SpringBoot客户端
+
+## tag::configuration-eureka[]
+#eureka:  #<1>
+#  instance:
+#    leaseRenewalIntervalInSeconds: 10
+#  client:
+#    registryFetchIntervalSeconds: 5
+#    serviceUrl:
+#      defaultZone: http://192.168.1.170:9000/eureka/
+#
+## end::configuration-eureka[]
+#
+#management:
+#  security:
+#    enabled: false
+
+eureka:
+  instance:
+    leaseRenewalIntervalInSeconds: 10
+  client:
+    registryFetchIntervalSeconds: 5
+    serviceUrl:
+      defaultZone: ${EUREKA_SERVICE_URL:http://localhost:8761}/eureka/
+
+management:
+  security:
+    enabled: false
